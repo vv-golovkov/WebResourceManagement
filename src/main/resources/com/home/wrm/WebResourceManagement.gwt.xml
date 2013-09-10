@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='WebResourceManagement'>
+  <!-- Inherit the core Web Toolkit stuff.                        -->
+  <inherits name='com.google.gwt.user.User' />
+  <inherits name='com.smartgwt.SmartGwt' />
+
+  <!-- Inherit the default GWT style sheet.  You can change       -->
+  <!-- the theme of your GWT application by uncommenting          -->
+  <!-- any one of the following lines.                            -->
+  <inherits name='com.google.gwt.user.theme.standard.Standard' />
+<!--   <inherits name='com.smartclient.theme.treefrog.TreeFrog'/> -->
+<!--   <inherits name='com.smartclient.theme.blackops.BlackOps'/> -->
+
+  <!-- <inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->
+  <!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/>     -->
+
+  <!-- Other module inherits                                      -->
+  <inherits name='com.smartgwt.tools.SmartGwtTools'></inherits>
+
+  <!-- Specify the app entry point class.                         -->
+  <entry-point class='com.home.wrm.client.WebResourceManagement' />
+
+  <!-- Specify the paths for translatable code                    -->
+  <source path='client' />
+  <source path='shared' />
+  
+<!--   	<servlet path='/WrProcessingService.rpc' class='com.home.wrm.server.system.remote.WrProcessingServiceDelegate' /> -->
+
+</module>

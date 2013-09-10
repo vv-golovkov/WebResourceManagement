@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+
+<!-- 	<context-param> -->
+<!-- 		<param-name>contextConfigLocation</param-name> -->
+<!-- 		<param-value>/WEB-INF/spring/applicationContext.xml</param-value> -->
+<!-- 	</context-param> -->
+	
+<!-- ***************************** CHARSET FILTER-UNUSED ****************************** -->
+<!-- 	<filter> -->
+<!-- 		<filter-name>charsetFilter</filter-name> -->
+<!-- 		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class> -->
+<!-- 		<init-param> -->
+<!-- 			<param-name>encoding</param-name> -->
+<!-- 			<param-value>Cp1251</param-value> -->
+<!-- 		</init-param> -->
+<!-- 		<init-param> -->
+<!-- 			<param-name>forceEncoding</param-name> -->
+<!-- 			<param-value>true</param-value> -->
+<!-- 		</init-param> -->
+<!-- 	</filter> -->
+<!-- 	<filter-mapping> -->
+<!-- 		<filter-name>charsetFilter</filter-name> -->
+<!-- 		<url-pattern>/*</url-pattern> -->
+<!-- 	</filter-mapping> -->
+
+<!-- ***************************** OPEN SESSION HIBERNATE FILTER-UNUSED ****************************** -->	
+<!-- 	<filter> -->
+<!--         <filter-name>OpenSessionInViewFilter</filter-name> -->
+<!--         <filter-class>org.springframework.orm.hibernate3.support.OpenSessionInViewFilter</filter-class> -->
+<!--     </filter> -->
+<!--     <filter-mapping> -->
+<!--         <filter-name>OpenSessionInViewFilter</filter-name> -->
+<!--         <url-pattern>/*</url-pattern> -->
+<!--     </filter-mapping> -->
+<!-- ***************************** LOG4J LISTENER-UNUSED ****************************** -->
+<!-- 	<listener> -->
+<!-- 		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class> -->
+<!-- 	</listener> -->
+
+	<context-param>
+        <param-name>contextClass</param-name>
+        <param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>
+    </context-param>
+ 
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>com.home.wrm.server.configuration.SpringIntegrationConfig</param-value>
+    </context-param>
+    
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	
+	<listener>
+		<listener-class>com.home.wrm.server.listener.WrmContextListener</listener-class>
+	</listener>
+
+<!-- Servlets and servlet mappings -->
+
+	<servlet>
+        <servlet-name>springGwtRemoteServiceServlet</servlet-name>
+        <servlet-class>com.home.wrm.server.RemoteServiceServletInterceptor</servlet-class>
+    </servlet>	
+<!-- 	<servlet> -->
+<!-- 		<servlet-name>wrProcessingServiceDelegate</servlet-name> -->
+<!-- 		<servlet-class>com.home.wrm.server.system.remote.WrProcessingServiceDelegate</servlet-class> -->
+<!-- 	</servlet> -->
+	
+	<servlet-mapping>
+		<servlet-name>springGwtRemoteServiceServlet</servlet-name>
+		<url-pattern>/WebResourceManagement/springGwtServices/*</url-pattern>
+	</servlet-mapping>
+	
+<!--  Session timeout in minutes -->
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+	
+	<welcome-file-list>
+		<welcome-file>WebResourceManagement.html</welcome-file>
+	</welcome-file-list>
+</web-app>

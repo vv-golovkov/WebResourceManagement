@@ -1,0 +1,137 @@
+/** Add css rules here for your application. */
+
+/** Example rules used by the template application (remove for your app) */
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #777777;
+  margin: 40px 0px 70px;
+  text-align: center;
+}
+
+/* .sendButton { */
+/*   display: block; */
+/*   font-size: 16pt; */
+/* } */
+
+/* /** Most GWT widgets already have a style name defined */ */
+/* .gwt-DialogBox { */
+/*   width: 400px; */
+/* } */
+
+/* .dialogVPanel { */
+/*   margin: 5px; */
+/* } */
+
+/* .serverResponseLabelError { */
+/*   color: red; */
+/* } */
+
+/* /** Set ids using widget.getElement().setId("idOfElement") */ */
+/* #closeButton { */
+/*   margin: 15px 6px 6px; */
+/* } */
+
+/* ***************************************************************************** */
+
+.formCellError {
+	background-color: #DD5555 !important;
+}
+
+.headerStyle {
+	background-image: url("images/orange.gif");
+	background-repeat: repeat-x;
+	background-position: center top;
+}
+
+.informationSeparatorStyle {
+	font-size: 10px;
+	font-weight: bold;
+	color: white;
+	font-family: Tahoma;
+	border-bottom: 1px inset white;
+}
+
+.readonlyFieldStyle {
+	padding: 2px 0 0 2px;
+	cursor: default;
+	color: #888888;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	font-size: 11px;
+	border: 1px solid #CACACA;
+}
+
+.titleStyle {
+	font-family: Tahoma;
+	font-size: 16px;
+	font-weight: bold;
+	color: white;
+}
+
+.clickable {
+/* 	color: #505050; */
+	color: white;
+/* 	margin-top: 40px; */
+	font-size: 11px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: underline;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.headerTitle,.headerTitleOver,.headerTitleDown,.headerTitleSelected,.headerTitleSelectedOver,.headerTitleSelectedDown,.headerTitleDisabled,.headerTitleSelectedDisabled	{
+	font-family: Arial, sans-serif;
+	font-size: 10px !important;
+	font-weight: bold;
+/* 	text-align: center; -------- */
+/* 	padding-left: 4px; -------- */
+/* 	padding-right: 4px; -------- */
+	color: #E0EFF9;
+	background-color: #DDDDBB;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+.headerTitleDown,.headerTitleSelected,.headerTitleSelectedOver,.headerTitleSelectedDown,.headerTitleSelectedDisabled {
+	color: #FFFFFF;
+}
+
+.headerTitleDisabled,.headerTitleSelectedDisabled {
+	color: #666666;
+}
+
+.searchFieldStyle {
+	margin-top: 5px;
+	margin-right: 20px;
+}
+
+.wrmTextBoxStyleForTextItem, .wrmTitleStyleForTextItem {
+	font-style: normal;
+	color: white;
+}
+
+.wrmTextBoxStyleForTextItem {
+	font-family: MS Reference Sans Serif;
+	font-size: 11px;
+	background-color: #AAAAAA;
+	border: 1px solid white;
+}
+.wrmTitleStyleForTextItem {
+	font-family: Tahoma;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+/*----------------------------------*/
+.aaa {
+	background-color: red;
+	border: 1px solid white;
+}
+.bbb {
+}
+.ccc {
+	font-family: Tahoma;
+	font-size: 11px;
+	color: blue;
+}
